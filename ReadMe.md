@@ -1,6 +1,10 @@
 
 # Employee Management System
 
+- **Frontend (Netlify):** [Frontend ](https://employeemanagement-kamit9171.netlify.app/)
+
+- **Backend (Render):** [Json Server](https://test-2qme.onrender.com)
+
 The Employee Management System is a modern web application built with Angular, Angular Material, Toaster, and Font Awesome. This system simplifies employee data management, allowing administrators to efficiently add, edit, delete, and view employee information. The application utilizes JSON Server as the backend database and is successfully deployed on Netlify for the frontend and on Render for the JSON Server.
 
 ## Features
@@ -53,9 +57,9 @@ Visit the live [Employee Management System](https://employeemanagement-kamit9171
 
 The Employee Management System frontend is deployed on Netlify, providing a reliable and accessible web interface for managing employee data. The JSON Server backend is deployed on Render, ensuring a seamless data storage and retrieval experience.
 
-- **Frontend (Netlify):** https://employeemanagement-kamit9171.netlify.app(#)
+- **Frontend (Netlify):** [Frontend ](https://employeemanagement-kamit9171.netlify.app/)
 
-- **Backend (Render):** https://test-2qme.onrender.com(#)
+- **Backend (Render):** [Json Server](https://test-2qme.onrender.com)
 
 ## Contributing
 
