@@ -17,7 +17,7 @@ The Employee Management System is a modern web application built with Angular, A
 
 ## Live Demo
 
-Visit the live [Employee Management System](#) to explore its features and functionality.
+Visit the live [Employee Management System](https://employeemanagement-kamit9171.netlify.app) to explore its features and functionality.
 
 ## Installation
 
