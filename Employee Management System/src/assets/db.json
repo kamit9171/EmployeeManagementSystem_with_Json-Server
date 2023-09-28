@@ -1,0 +1,18 @@
+{
+  "Employee": [
+    {
+      "id": 2,
+      "name": "Bablu",
+      "location": "bangalore",
+      "emailId": "bablu@wipro.com",
+      "mobile": "75591722890"
+    },
+    {
+      "id": 3,
+      "name": "Amit kumar",
+      "location": "bangalore",
+      "emailId": "kamit9171@gmail.com",
+      "mobile": "7559282294"
+    }
+  ]
+}

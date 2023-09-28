@@ -1,0 +1,60 @@
+<div class="row">
+    <h2>Employee List</h2>
+</div>
+<br class="form-group">
+  <label for="nameFilter">Filter by name:</label>
+  <input
+  type="text"
+  class="form-control"
+  id="nameFilter"
+  [(ngModel)]="nameFilter"
+  name="nameFilter">
+  <button class="btn btn-primary" (click)="applyFilter()">Filter</button>
+
+  <br>
+  <div>
+    <div> Total number of Employee:{{filteredEmp? filteredEmp.length: 0}}
+    </div>
+ 
+</div>
+<table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>EmailId</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    ​ <tbody>
+        <tr *ngFor="let employee of filteredEmp">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.location }}</td>
+          <td>{{ employee.emailId }}</td>
+          <td>{{ employee.mobile }}</td>
+          <td>
+      ​      <button (click)="updateEmployee(employee.id)" class="btn btn-primary">
+              Update
+            </button>
+           
+            ​<button
+              (click)="deleteEmployee(employee.id)"
+              class="btn btn-danger"
+              style="margin-left: 10px"
+            >
+            ​  Delete
+            </button>
+            <button
+              (click)="employeeDetails(employee.id)"
+              class="btn btn-primary"
+              style="margin-left: 10px"
+            >
+              View
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>

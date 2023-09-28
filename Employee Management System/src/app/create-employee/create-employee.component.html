@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center">Create Employee</h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="employee.name" name="name"
+                            pattern="^[a-zA-Z]+$" minlength="3" required placeholder="Enter name (minimum 3 characters)"
+                            (ngModelChange)="validateForm()" />
+                        <div *ngIf="!isFormValid && employee.name && employee.name.length<3" class="text-danger">Please
+                            enter a name with a minimum of 3 characters.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+
+                        <select id="location" name="location" class="form-control" [(ngModel)]="employee.location">
+                            <option value="" selected disabled>Select a location</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="pune">Pune</option>
+                            <option value="hyderabad">Hyderabad</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailId">Email Id</label>
+                        <input type="text" class="form-control" id="emailId" [(ngModel)]="employee.emailId"
+                            name="emailId" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Please enter a valid email address" placeholder="Enter email in Correct format"
+                            (ngModelChange)="validateForm()" />
+                        <div *ngIf="!isFormValid && this.employee.emailId" class="text-danger">Please enter a valid
+                            email address(Email@abc.com).</div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile</label>
+                        <input type="text" class="form-control" id="mobile" [(ngModel)]="employee.mobile" name="mobile"
+                            placeholder="Enter mobile number" />
+                    </div>
+
+
+                    <br />
+                    <button class="btn btn-success" type="submit" [disabled]="!isFormValid"
+                        [ngClass]="{'btn-disabled': !isFormValid}">Submit</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
